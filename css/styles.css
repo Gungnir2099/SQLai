@@ -1,0 +1,223 @@
+/* Basic reset to ensure consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Full page background image */
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bg1.jpg'); /* Default background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1; /* Ensure background image is at the bottom layer */
+    transition: background-image 1s ease-in-out;
+}
+
+/* Header styling */
+header {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding-top: 60px; /* Offset the header to avoid overlapping with nav */
+}
+
+/* Navigation bar */
+nav {
+    width: 100%;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 1s ease-in-out, color 1s ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav.light-theme ul li a {
+    color: #000; /* Light theme navigation links */
+}
+
+nav.dark-theme ul li a {
+    color: #fff; /* Dark theme navigation links */
+}
+
+/* Navigation and footer color themes */
+nav.light-theme, footer.light-theme {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #000;
+}
+
+nav.dark-theme, footer.dark-theme {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
+
+.profile-main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: color 1s ease-in-out;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 5px solid #fff;
+}
+
+.profile-main-container h1 {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+}
+
+.profile-main-container h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.profile-main-container h4 {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.profile-main-container h5 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.profile-main-container p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.profile-main-container.light-theme h1,
+.profile-main-container.light-theme h4 {
+    color: #fff; /* Light theme profile text */
+}
+
+.profile-main-container.dark-theme h1,
+.profile-main-container.dark-theme h4 {
+    color: #333; /* Dark theme profile text */
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: inherit;
+    font-size: 2rem;
+    transition: color 0.3s;
+    text-decoration: none; /* Ensure no underline for links */
+}
+
+.social-links a:hover {
+    color: #0077b5; /* Change this to the hover color you prefer */
+}
+
+.social-icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Main content styling */
+main {
+    max-width: 800px;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Ensure main content is above background image */
+    margin-top: 2rem;
+    text-align: left; /* Ensure main text is left-aligned */
+}
+
+main section {
+    margin-bottom: 2rem;
+}
+
+main section h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #333;
+    text-align: center; /* Center align section titles */
+}
+
+main section ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+main section ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    z-index: 1; /* Ensure footer is above background image */
+    margin-top: auto;
+    transition: background-color 1s ease-in-out, color 1s ease-in-out;
+}
+
+/* Link styling */
+a {
+    color: #0066cc;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#gs:hover{
+    text-decoration: none;
+}
+
+#gh:hover{
+    text-decoration: none;
+}
