@@ -6,15 +6,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const profileContainer = document.querySelector('.profile-main-container');
 
     const backgrounds = [
-        { url: 'images/bg1.jpg', theme: 'dark-theme' },
-        { url: 'images/bg2.jpg', theme: 'dark-theme' },
-        { url: 'images/bg3.jpg', theme: 'dark-theme' },
-        { url: 'images/bg4.jpg', theme: 'light-theme' },
-        { url: 'images/bg5.jpg', theme: 'light-theme' },
-        { url: 'images/bg6.jpg', theme: 'light-theme' },
-        { url: 'images/bg7.jpg', theme: 'light-theme' },
-        { url: 'images/bg8.jpg', theme: 'light-theme' },
-        { url: 'images/bg9.jpg', theme: 'light-theme' },
+        { url: '../images/bg1.jpg', theme: 'dark-theme' },
+        { url: '../images/bg2.jpg', theme: 'dark-theme' },
+        { url: '../images/bg3.jpg', theme: 'dark-theme' },
+        { url: '../images/bg4.jpg', theme: 'light-theme' },
+        { url: '../images/bg5.jpg', theme: 'light-theme' },
+        { url: '../images/bg6.jpg', theme: 'light-theme' },
+        { url: '../images/bg7.jpg', theme: 'light-theme' },
+        { url: '../images/bg8.jpg', theme: 'light-theme' },
+        { url: '../images/bg9.jpg', theme: 'light-theme' },
     ];
 
     let currentIndex = 0;
