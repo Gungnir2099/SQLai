@@ -19,11 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentIndex = 0;
 
-    // Function to preload images
-    function preloadImages(urls) {
-        urls.forEach(url => {
+    function preloadBackgrounds() {
+        backgrounds.forEach(background => {
             const img = new Image();
-            img.src = url;
+            img.src = background.url;
         });
     }
 
@@ -44,9 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('currentBackgroundIndex', currentIndex);
     }
 
-    // Preload background images
-    const imageUrls = backgrounds.map(bg => bg.url);
-    preloadImages(imageUrls);
+    // Preload all background images
+    preloadBackgrounds();
 
     // Set initial background and theme
     const storedIndex = localStorage.getItem('currentBackgroundIndex');
