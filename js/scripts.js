@@ -19,6 +19,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentIndex = 0;
 
+    // Function to preload images
+    function preloadImages(urls) {
+        urls.forEach(url => {
+            const img = new Image();
+            img.src = url;
+        });
+    }
+
     function applyBackground(index) {
         bgImage.style.backgroundImage = `url(${backgrounds[index].url})`;
         nav.className = '';
@@ -35,6 +43,10 @@ document.addEventListener('DOMContentLoaded', function() {
         applyBackground(currentIndex);
         localStorage.setItem('currentBackgroundIndex', currentIndex);
     }
+
+    // Preload background images
+    const imageUrls = backgrounds.map(bg => bg.url);
+    preloadImages(imageUrls);
 
     // Set initial background and theme
     const storedIndex = localStorage.getItem('currentBackgroundIndex');
