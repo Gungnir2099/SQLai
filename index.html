@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siqi Lai - Personal Website</title>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Use local Font Awesome CSS -->
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
     <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
@@ -44,17 +45,7 @@
     </div>
     <footer>
         <p>&copy; 2024 Siqi Lai. All rights reserved.</p>
-        <p id="view-count">Total Views: 0</p>
     </footer>
     <script src="js/scripts.js"></script>
-    <script>
-        // 获取访问次数
-        let viewCount = localStorage.getItem('viewCount') || 0;
-        viewCount++;
-        localStorage.setItem('viewCount', viewCount);
-        
-        // 更新页面上的访问次数显示
-        document.getElementById('view-count').innerText = `Total Views: ${viewCount}`;
-    </script>
 </body>
 </html>
